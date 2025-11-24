@@ -29,6 +29,17 @@
 
       <a href="/pages/about">{{ section.settings.menu_about | default: 'About' }}</a>
       <a href="/pages/contact">{{ section.settings.menu_contact | default: 'Contact' }}</a>
+
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle">{{ section.settings.menu_policies | default: 'Policies' }}</a>
+        <div class="dropdown-content">
+          <a href="{{ section.settings.policy_contact_url }}">{{ section.settings.policy_contact_label | default: 'Contact' }}</a>
+          <a href="{{ section.settings.policy_privacy_url }}">{{ section.settings.policy_privacy_label | default: 'Privacy Policy' }}</a>
+          <a href="{{ section.settings.policy_refund_url }}">{{ section.settings.policy_refund_label | default: 'Refund Policy' }}</a>
+          <a href="{{ section.settings.policy_shipping_url }}">{{ section.settings.policy_shipping_label | default: 'Shipping' }}</a>
+          <a href="{{ section.settings.policy_terms_url }}">{{ section.settings.policy_terms_label | default: 'Terms of Service' }}</a>
+        </div>
+      </div>
     </nav>
 
     <div class="header-icons">
@@ -77,6 +88,26 @@
     </li>
     <li><a href="/pages/about">{{ section.settings.menu_about | default: 'About' }}</a></li>
     <li><a href="/pages/contact">{{ section.settings.menu_contact | default: 'Contact' }}</a></li>
+    <li>
+      <strong>{{ section.settings.menu_policies | default: 'Policies' }}</strong>
+      <ul style="margin-top: 1rem; padding-left: 1rem;">
+        <li style="margin-bottom: 0.8rem;">
+          <a href="{{ section.settings.policy_contact_url }}" style="font-size: 0.95rem; text-transform: none;">{{ section.settings.policy_contact_label | default: 'Contact' }}</a>
+        </li>
+        <li style="margin-bottom: 0.8rem;">
+          <a href="{{ section.settings.policy_privacy_url }}" style="font-size: 0.95rem; text-transform: none;">{{ section.settings.policy_privacy_label | default: 'Privacy Policy' }}</a>
+        </li>
+        <li style="margin-bottom: 0.8rem;">
+          <a href="{{ section.settings.policy_refund_url }}" style="font-size: 0.95rem; text-transform: none;">{{ section.settings.policy_refund_label | default: 'Refund Policy' }}</a>
+        </li>
+        <li style="margin-bottom: 0.8rem;">
+          <a href="{{ section.settings.policy_shipping_url }}" style="font-size: 0.95rem; text-transform: none;">{{ section.settings.policy_shipping_label | default: 'Shipping' }}</a>
+        </li>
+        <li style="margin-bottom: 0.8rem;">
+          <a href="{{ section.settings.policy_terms_url }}" style="font-size: 0.95rem; text-transform: none;">{{ section.settings.policy_terms_label | default: 'Terms of Service' }}</a>
+        </li>
+      </ul>
+    </li>
   </ul>
 </div>
 
@@ -158,6 +189,71 @@
       "id": "search_placeholder",
       "label": "Search Placeholder Text",
       "default": "Search for products..."
+    },
+    {
+      "type": "text",
+      "id": "menu_policies",
+      "label": "Policies Menu Text",
+      "default": "Policies"
+    },
+    {
+      "type": "header",
+      "content": "Policy Links"
+    },
+    {
+      "type": "text",
+      "id": "policy_contact_label",
+      "label": "Contact Policy Label",
+      "default": "Contact"
+    },
+    {
+      "type": "url",
+      "id": "policy_contact_url",
+      "label": "Contact Policy URL"
+    },
+    {
+      "type": "text",
+      "id": "policy_privacy_label",
+      "label": "Privacy Policy Label",
+      "default": "Privacy Policy"
+    },
+    {
+      "type": "url",
+      "id": "policy_privacy_url",
+      "label": "Privacy Policy URL"
+    },
+    {
+      "type": "text",
+      "id": "policy_refund_label",
+      "label": "Refund Policy Label",
+      "default": "Refund Policy"
+    },
+    {
+      "type": "url",
+      "id": "policy_refund_url",
+      "label": "Refund Policy URL"
+    },
+    {
+      "type": "text",
+      "id": "policy_shipping_label",
+      "label": "Shipping Policy Label",
+      "default": "Shipping"
+    },
+    {
+      "type": "url",
+      "id": "policy_shipping_url",
+      "label": "Shipping Policy URL"
+    },
+    {
+      "type": "text",
+      "id": "policy_terms_label",
+      "label": "Terms of Service Label",
+      "default": "Terms of Service"
+    },
+    {
+      "type": "url",
+      "id": "policy_terms_url",
+      "label": "Terms of Service URL"
     }
   ]
 }

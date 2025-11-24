@@ -79,7 +79,19 @@
     "sections": {
       "header": {
         "type": "header",
-        "settings": {}
+        "settings": {
+          "menu_policies": "Policies",
+          "policy_contact_label": "Contact",
+          "policy_contact_url": "https://checkout.shopify.com/98015904073/policies/48348987721.html?locale=en",
+          "policy_privacy_label": "Privacy Policy",
+          "policy_privacy_url": "https://checkout.shopify.com/98015904073/policies/48347447625.html?locale=en",
+          "policy_refund_label": "Refund Policy",
+          "policy_refund_url": "https://checkout.shopify.com/98015904073/policies/48348627273.html?locale=en",
+          "policy_shipping_label": "Shipping",
+          "policy_shipping_url": "https://checkout.shopify.com/98015904073/policies/48348856649.html?locale=en",
+          "policy_terms_label": "Terms of Service",
+          "policy_terms_url": "https://checkout.shopify.com/98015904073/policies/48348660041.html?locale=en"
+        }
       },
       "footer": {
         "type": "footer",
